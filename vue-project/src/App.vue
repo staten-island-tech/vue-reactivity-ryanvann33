@@ -7,12 +7,12 @@
     <h1 class="ck">Ryan's Menu</h1>
     <div class="box">
       <Fruit
-        v-for="menu in menus"
-        :key="menu"
+        v-for="(menu, index) in menus"
+        :key="index"
         :img="menu.img"
         :name="menu.name"
         :price="menu.price"
-        @button-clicked="add"
+        @button-clicked="addToCart(menu)"
       />
     </div>
   </div>
@@ -52,19 +52,18 @@ export default {
           name: 'Fried Rice',
           price: 4
         }
-        
-
       ]
-    }
+    };
   },
   methods: {
-    add() {
-      this.items = this.items + 1
-      this.total = this.total + this.price
+    addToCart(menu) {
+      this.items = this.items + 1;
+      this.total = this.total + menu.price;
     }
   }
-}
+};
 </script>
+
 
 <style scoped>
 .topbar {

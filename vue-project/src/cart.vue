@@ -4,7 +4,6 @@
     <p>{{ total }}</p>
 </div>
 </template>
-
 <script>
 export default {
    Name: "Cart",
@@ -14,8 +13,6 @@ export default {
     },
 }
 </script>
-
 <style scoped>
-
 </style>
 
