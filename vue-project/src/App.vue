@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="topbar">
-      <p>Cart</p>
+      <p class="text">Cart</p>
       <Cart class="cart" :items="items" :total="total" />
     </div>
     <h1 class="ck">Ryan's Menu</h1>
@@ -19,13 +19,13 @@
 </template>
 
 <script>
-import Fruit from './MenuItem.vue'
-import Cart from './cart.vue'
+import Fruit from "./MenuItem.vue";
+import Cart from "./cart.vue";
 
 export default {
   components: {
     Fruit,
-    Cart
+    Cart,
   },
   data() {
     return {
@@ -33,37 +33,36 @@ export default {
       total: 0,
       menus: [
         {
-          img: 'https://natashaskitchen.com/wp-content/uploads/2020/03/Pan-Seared-Steak-4.jpg',
-          name: 'Steak',
-          price: 1
+          img: "https://natashaskitchen.com/wp-content/uploads/2020/03/Pan-Seared-Steak-4.jpg",
+          name: "Steak",
+          price: 1,
         },
         {
-          img: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382539796174.jpeg',
-          name: 'Chicken',
-          price: 2
+          img: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382539796174.jpeg",
+          name: "Chicken",
+          price: 2,
         },
         {
-          img: 'https://thewoksoflife.com/wp-content/uploads/2022/06/spicy-thai-basil-clams-9-650x872.jpg',
-          name: 'Clams',
-          price: 89
+          img: "https://thewoksoflife.com/wp-content/uploads/2022/06/spicy-thai-basil-clams-9-650x872.jpg",
+          name: "Clams",
+          price: 89,
         },
         {
-          img: 'https://www.whiskaffair.com/wp-content/uploads/2020/07/Hibachi-Fried-Rice-2-1.jpg',
-          name: 'Fried Rice',
-          price: 4
-        }
-      ]
+          img: "https://www.whiskaffair.com/wp-content/uploads/2020/07/Hibachi-Fried-Rice-2-1.jpg",
+          name: "Fried Rice",
+          price: 4,
+        },
+      ],
     };
   },
   methods: {
     addToCart(menu) {
       this.items = this.items + 1;
       this.total = this.total + menu.price;
-    }
-  }
+    },
+  },
 };
 </script>
-
 
 <style scoped>
 .topbar {
@@ -73,7 +72,7 @@ export default {
   display: flex;
   top: 0px;
   left: 0px;
-  background-color: rgb(205,92,92);
+  background-color: rgb(205, 92, 92);
   justify-content: right;
 }
 
@@ -88,11 +87,15 @@ export default {
 }
 
 .cart {
-  margin-top: 30px;
-  margin-right: 50px;
+  margin-top: 450px;
+  margin-right: 1800px;
   position: relative;
+  font-size: 20px;
 }
-
+.text {
+  margin-top: 430px;
+  font-size: 30px;
+}
 .box {
   display: flex;
   flex-direction: row;

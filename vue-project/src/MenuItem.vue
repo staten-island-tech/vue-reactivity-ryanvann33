@@ -4,20 +4,22 @@
       <img :src="img" alt="" />
       <h1 class="name">{{ name }}</h1>
       <p class="price">${{ price }}</p>
-      <button @click="$emit('buttonClicked')">Add to Cart</button>
+      <button class="button1" @click="$emit('buttonClicked')">
+        Add to Cart
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  Name: 'Fruit',
+  Name: "Fruit",
   props: {
     img: String,
     name: String,
-    price: Number
-  }
-}
+    price: Number,
+  },
+};
 </script>
 
 <style scoped>
@@ -32,7 +34,7 @@ export default {
   height: 30%;
   width: 60%;
   margin: 30px;
-  background-color: rgb(119,136,153);
+  background-color: rgb(119, 136, 153);
   border-radius: 20px;
   border-width: 3px;
   border-style: solid;
@@ -57,5 +59,11 @@ img {
 
 .button {
   align-content: center;
+}
+
+.button1 {
+  height: 30px;
+  margin-left: 101px;
+  margin-bottom: 15px;
 }
 </style>
